@@ -1134,7 +1134,7 @@ gsap.from(".page5 h3",
 
 
 
-  
+
 
   const page5Card1 = document.querySelector('.page5_card1');
 
@@ -1155,20 +1155,20 @@ gsap.from(".page5 h3",
     page5Card1.addEventListener('click', function () {
       window.open('https://www.youtube.com/watch?v=L7zVNHXjF1c', '_blank');
     });
-    page5Card1.addEventListener('ontouchstart', function () {
+    page5Card2.addEventListener('ontouchstart', function () {
       window.open('https://www.youtube.com/watch?v=L7zVNHXjF1c', '_blank');
     });
     // Add cursor pointer to indicate it's clickable
-    page5Card2.style.cursor = 'pointer';
+    page5Card3.style.cursor = 'pointer';
   }
   
   const page5Card3 = document.querySelector('.page5_card3');
   
   if (page5Card3) {
-    page5Card1.addEventListener('click', function () {
+    page5Card3.addEventListener('click', function () {
       window.open('https://www.youtube.com/watch?v=9BSsIOb1YHg', '_blank');
     });
-    page5Card1.addEventListener('ontouchstart', function () {
+    page5Card3.addEventListener('ontouchstart', function () {
       window.open('https://www.youtube.com/watch?v=9BSsIOb1YHg', '_blank');
     });
     // Add cursor pointer to indicate it's clickable
