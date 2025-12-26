@@ -1150,18 +1150,18 @@ gsap.from(".page5 h3",
   }
   
   const page5Card2 = document.querySelector('.page5_card2');
-  
+
   if (page5Card2) {
-    page5Card2.addEventListener('click', function () {
+    // Use both click and touchstart for best compatibility
+    function openYouTubeVideo() {
       window.open('https://www.youtube.com/watch?v=L7zVNHXjF1c', '_blank');
-    });
-    page5Card2.addEventListener('ontouchstart', function () {
-      window.open('https://www.youtube.com/watch?v=L7zVNHXjF1c', '_blank');
-    });
+    }
+    page5Card2.addEventListener('click', openYouTubeVideo);
+    page5Card2.addEventListener('touchstart', openYouTubeVideo);
+
     // Add cursor pointer to indicate it's clickable
     page5Card2.style.cursor = 'pointer';
   }
-  
   const page5Card3 = document.querySelector('.page5_card3');
   
   if (page5Card3) {
