@@ -1152,14 +1152,14 @@ gsap.from(".page5 h3",
   const page5Card2 = document.querySelector('.page5_card2');
   
   if (page5Card2) {
-    page5Card1.addEventListener('click', function () {
+    page5Card2.addEventListener('click', function () {
       window.open('https://www.youtube.com/watch?v=L7zVNHXjF1c', '_blank');
     });
     page5Card2.addEventListener('ontouchstart', function () {
       window.open('https://www.youtube.com/watch?v=L7zVNHXjF1c', '_blank');
     });
     // Add cursor pointer to indicate it's clickable
-    page5Card3.style.cursor = 'pointer';
+    page5Card2.style.cursor = 'pointer';
   }
   
   const page5Card3 = document.querySelector('.page5_card3');
