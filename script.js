@@ -1152,25 +1152,18 @@ gsap.from(".page5 h3",
   const page5Card2 = document.querySelector('.page5_card2');
 
   if (page5Card2) {
-    function openYouTubeVideo(event) {
-      // Prevents duplicate firing (e.g., on iOS both touch and click may fire)
-      event.preventDefault();
+    // Use both click and touchstart for best compatibility
+    function openYouTubeVideo() {
       window.open('https://www.youtube.com/watch?v=L7zVNHXjF1c', '_blank');
-      // On mobile, removing focus might help avoid "ghost" clicks
-      page5Card2.blur && page5Card2.blur();
     }
+    page5Card2.addEventListener('click', openYouTubeVideo);
+    page5Card2.addEventListener('touchstart', openYouTubeVideo);
 
-    // Remove previously added event listeners in case they were not effective
-    page5Card2.onclick = openYouTubeVideo;
-    page5Card2.ontouchstart = openYouTubeVideo;
-
-    // Also add addEventListener versions for best compatibility
-    page5Card2.addEventListener('click', openYouTubeVideo, false);
-    page5Card2.addEventListener('touchstart', openYouTubeVideo, false);
-
-    // Show as clickable
+    // Add cursor pointer to indicate it's clickable
     page5Card2.style.cursor = 'pointer';
   }
+
+
 
 
 
